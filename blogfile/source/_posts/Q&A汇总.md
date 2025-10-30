@@ -1,5 +1,6 @@
 ---
 title: QA汇总
+abbrlink: 49b95b18
 date: 2025-10-28 23:44:11
 tags:
 ---
@@ -26,3 +27,9 @@ categories: 分类名称
 ##### 网站乱码
 
 确保_config.yml文件是utf-8编码
+
+
+
+#####  安装主题
+
+主题库  https://hexo.io/themes/

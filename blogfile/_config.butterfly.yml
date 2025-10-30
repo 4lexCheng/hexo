@@ -327,7 +327,7 @@ aside:
     enable: true
     # Type: monthly / yearly
     type: monthly
-    # Eg: YYYYÄêMMÔÂ
+    # Eg: YYYYï¿½ï¿½MMï¿½ï¿½
     format: MMMM YYYY
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
@@ -363,15 +363,15 @@ rightside_bottom:
 translate:
   enable: false
   # The text of a button
-  default: ·±
-  # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese£©
+  default: ï¿½ï¿½
+  # the language of website (1 - Traditional Chinese/ 2 - Simplified Chineseï¿½ï¿½
   defaultEncoding: 2
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '·±'
+  msgToTraditionalChinese: 'ï¿½ï¿½'
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: 'º†'
+  msgToSimplifiedChinese: 'ï¿½ï¿½'
 
 # Read Mode
 readmode: true
@@ -472,7 +472,7 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
+  use: local_search
   placeholder:
 
   # Algolia Search
@@ -483,7 +483,7 @@ search:
   # Local Search
   local_search:
     # Preload the search data when the page loads.
-    preload: false
+    preload: true
     # Show top n results per article, show all results by setting to -1
     top_n_per_article: 1
     # Unescape html strings to the readable one.

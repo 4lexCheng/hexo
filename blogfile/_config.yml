@@ -5,18 +5,18 @@
 # Site
 title: 4lexSong
 subtitle: '欢迎来到松仔之家'
-description: ''
-keywords:
+description: 'subtitle去哪里了我请问'
+keywords: 'subtitle,松仔,我请问,有趣,练手,苦恼'
 author: AlexSong
 language: 
-    - zh-tw
+    - zh-CN
     - en
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://4lexcheng.github.io/
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -107,3 +107,13 @@ deploy:
   type: git
   repository: https://github.com/4lexCheng/4lexCheng.github.io.git
   branch: main
+  
+# abbrlink config
+abbrlink:
+  alg: crc32      # Algorithm used to calc abbrlink. Support crc16(default) and crc32
+  rep: hex        # Representation of abbrlink in URLs. Support dec(default) and hex
+
+search:
+  path: search.xml
+  field: all
+  content: true
