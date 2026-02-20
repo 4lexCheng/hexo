@@ -1,0 +1,84 @@
+/* Homepage feed visual upgrade: tech-glass edition */
+:root {
+  --luxe-surface: rgba(255, 255, 255, 0.66);
+  --luxe-border: rgba(40, 52, 80, 0.2);
+  --luxe-shadow: 0 20px 50px rgba(10, 22, 42, 0.16);
+  --luxe-shadow-hover: 0 30px 70px rgba(10, 22, 42, 0.24);
+  --luxe-accent: #0c7bff;
+  --luxe-accent-2: #00c2ff;
+  --luxe-accent-soft: rgba(12, 123, 255, 0.2);
+  --luxe-glow: 0 0 0 1px rgba(12, 123, 255, 0.22), 0 0 28px rgba(12, 123, 255, 0.16);
+}
+
+[data-theme="dark"] {
+  --luxe-surface: rgba(16, 22, 34, 0.72);
+  --luxe-border: rgba(155, 190, 255, 0.22);
+  --luxe-shadow: 0 22px 48px rgba(0, 0, 0, 0.42);
+  --luxe-shadow-hover: 0 34px 76px rgba(0, 0, 0, 0.58);
+  --luxe-accent: #58a6ff;
+  --luxe-accent-2: #48e0ff;
+  --luxe-accent-soft: rgba(88, 166, 255, 0.26);
+  --luxe-glow: 0 0 0 1px rgba(88, 166, 255, 0.28), 0 0 30px rgba(72, 224, 255, 0.2);
+}
+
+#recent-posts {
+  position: relative;
+  padding: 10px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 0% 5%, rgba(12, 123, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 100% 100%, rgba(0, 194, 255, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
+}
+
+#recent-posts .recent-post-item {
+  border: 1px solid var(--luxe-border);
+  border-radius: 20px;
+  background: var(--luxe-surface);
+  box-shadow: var(--luxe-shadow);
+  backdrop-filter: blur(10px) saturate(135%);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+}
+
+#recent-posts .recent-post-item:hover {
+  transform: translateY(-6px) scale(1.004);
+  border-color: var(--luxe-accent-soft);
+  box-shadow: var(--luxe-shadow-hover), var(--luxe-glow);
+  background: color-mix(in srgb, var(--luxe-surface) 88%, var(--luxe-accent-soft));
+}
+
+#recent-posts .recent-post-item > .recent-post-info {
+  padding-top: 12px;
+  padding-bottom: 14px;
+}
+
+#recent-posts .recent-post-item .article-title {
+  letter-spacing: 0.2px;
+  font-weight: 700;
+}
+
+#recent-posts .recent-post-item .article-meta-wrap {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 7px 10px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--luxe-accent-soft) 68%, transparent);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--luxe-accent-soft) 72%, transparent), transparent 85%);
+}
+
+#recent-posts .recent-post-item .content {
+  opacity: 0.92;
+  line-height: 1.78;
+}
+
+@media (max-width: 768px) {
+  #recent-posts {
+    padding: 4px;
+    border-radius: 18px;
+  }
+
+  #recent-posts .recent-post-item {
+    border-radius: 16px;
+  }
+}

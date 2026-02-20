@@ -1,39 +1,84 @@
----
+﻿---
 title: Hello World
 abbrlink: 4a17b156
+date: 2025-09-29 23:44:37
+description: Hexo 新站第一篇文章模板：快速上手写作、预览、生成与部署。
+tags:
+  - Hexo
+  - 入门
+categories:
+  - 建站指南
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+{% note primary %}
+这是 Hexo 默认首文的增强版，保留核心命令并补充了更清晰的上手流程。
+{% endnote %}
 
-### Create a new post
+## 1. 这篇文章能帮你做什么
 
-``` bash
-$ hexo new "My New Post"
+- 新建一篇文章
+- 本地预览站点
+- 生成静态文件
+- 一键部署到远端
+
+## 2. 快速开始
+
+### 2.1 新建文章
+
+```bash
+hexo new "我的第一篇文章"
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+更多说明：<https://hexo.io/docs/writing.html>
 
-### Run server
+### 2.2 本地预览
 
-``` bash
-$ hexo server
+```bash
+hexo server
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+默认访问：`http://localhost:4000/`
 
-### Generate static files
+更多说明：<https://hexo.io/docs/server.html>
 
-``` bash
-$ hexo generate
+### 2.3 生成静态文件
+
+```bash
+hexo generate
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+更多说明：<https://hexo.io/docs/generating.html>
 
-### Deploy to remote sites
+### 2.4 部署到远端
 
-``` bash
-$ hexo deploy
+```bash
+hexo deploy
 ```
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+更多说明：<https://hexo.io/docs/one-command-deployment.html>
+
+## 3. 常见问题
+
+### 3.1 执行命令报错找不到 `hexo`
+
+可用 `npx` 方式执行：
+
+```bash
+npx hexo server
+npx hexo generate
+npx hexo deploy
+```
+
+### 3.2 页面内容没更新
+
+推荐按顺序执行：
+
+```bash
+hexo clean
+hexo generate
+hexo deploy
+```
+
+{% note success %}
+后续你可以把这篇当作博客操作手册入口页，给新文章统一引用。
+{% endnote %}

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=ZCOOL+KuaiLe&display=swap');
+
+:root {
+  --anime-bg-a: #fff8ff;
+  --anime-bg-b: #f4fbff;
+  --anime-bg-c: #f9f3ff;
+  --anime-text: #2b2a3a;
+  --anime-title: #3a315f;
+  --anime-accent: #ff7bb5;
+  --anime-accent-2: #5fb8ff;
+  --anime-border: rgba(120, 110, 170, 0.22);
+  --anime-surface: rgba(255, 255, 255, 0.72);
+  --anime-shadow: 0 14px 30px rgba(85, 82, 140, 0.14);
+  --anime-shadow-hover: 0 22px 42px rgba(85, 82, 140, 0.2);
+}
+
+[data-theme='dark'] {
+  --anime-bg-a: #15182a;
+  --anime-bg-b: #1b2234;
+  --anime-bg-c: #24203b;
+  --anime-text: #e9e9f8;
+  --anime-title: #f4eeff;
+  --anime-accent: #ff8fc3;
+  --anime-accent-2: #73c8ff;
+  --anime-border: rgba(203, 198, 255, 0.2);
+  --anime-surface: rgba(34, 35, 58, 0.68);
+  --anime-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
+  --anime-shadow-hover: 0 24px 48px rgba(0, 0, 0, 0.46);
+}
+
+body {
+  font-family: 'M PLUS Rounded 1c', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: var(--anime-text);
+  background:
+    radial-gradient(circle at 8% 10%, rgba(255, 153, 220, 0.14), transparent 24%),
+    radial-gradient(circle at 90% 12%, rgba(111, 186, 255, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 92%, rgba(184, 151, 255, 0.13), transparent 24%),
+    linear-gradient(130deg, var(--anime-bg-a), var(--anime-bg-b) 48%, var(--anime-bg-c));
+  background-attachment: fixed;
+}
+
+#web_bg {
+  opacity: 0.7;
+}
+
+#site-title,
+.site-name,
+#page-header #site-info #site-title {
+  font-family: 'ZCOOL KuaiLe', 'M PLUS Rounded 1c', sans-serif;
+  letter-spacing: 0.8px;
+}
+
+#nav {
+  backdrop-filter: blur(10px) saturate(120%);
+  background: color-mix(in srgb, var(--anime-surface) 72%, transparent);
+  border-bottom: 1px solid var(--anime-border);
+}
+
+#nav .site-page,
+#nav .menus_item_child .site-page {
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+#nav .site-page:hover {
+  color: var(--anime-title);
+  background: color-mix(in srgb, var(--anime-accent-2) 18%, transparent);
+}
+
+.layout > div:first-child:not(.recent-posts),
+#recent-posts .recent-post-item,
+#aside-content .card-widget,
+#archive,
+#page,
+#post,
+#tag,
+#category {
+  border: 1px solid var(--anime-border) !important;
+  border-radius: 20px !important;
+  background: var(--anime-surface) !important;
+  box-shadow: var(--anime-shadow);
+  backdrop-filter: blur(10px) saturate(125%);
+}
+
+#recent-posts .recent-post-item {
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+#recent-posts .recent-post-item:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--anime-accent) 36%, var(--anime-border)) !important;
+  box-shadow: var(--anime-shadow-hover);
+}
+
+#recent-posts .recent-post-item .article-title {
+  color: var(--anime-title) !important;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+#recent-posts .recent-post-item .article-meta-wrap {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--anime-accent-2) 24%, transparent);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--anime-accent-2) 14%, transparent),
+    color-mix(in srgb, var(--anime-accent) 10%, transparent)
+  );
+}
+
+#aside-content .card-widget .item-headline {
+  color: var(--anime-title);
+}
+
+#aside-content .card-widget {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#aside-content .card-widget:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--anime-shadow-hover);
+}
+
+#card-info-btn,
+.pagination-post,
+#pagination .page-number,
+#pagination .extend {
+  border-radius: 999px !important;
+  border: 1px solid color-mix(in srgb, var(--anime-accent-2) 30%, transparent) !important;
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--anime-accent) 22%, transparent),
+    color-mix(in srgb, var(--anime-accent-2) 22%, transparent)
+  ) !important;
+  color: var(--anime-title) !important;
+}
+
+#card-info-btn:hover,
+.pagination-post:hover,
+#pagination .page-number:hover,
+#pagination .extend:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--anime-accent-2) 22%, transparent);
+}
+
+#post h1,
+#post h2,
+#post h3,
+#page h1,
+#page h2,
+#page h3 {
+  color: var(--anime-title);
+  font-weight: 800;
+}
+
+blockquote {
+  border-left: 4px solid var(--anime-accent) !important;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--anime-accent) 12%, transparent),
+    color-mix(in srgb, var(--anime-accent-2) 8%, transparent)
+  ) !important;
+  border-radius: 10px;
+}
+
+.tag-cloud-list a,
+#tag-page-tags a {
+  border-radius: 999px;
+  border: 1px solid var(--anime-border);
+  background: color-mix(in srgb, var(--anime-surface) 88%, transparent);
+}
+
+.bangumi-frame-wrap {
+  position: relative;
+  min-height: 760px;
+  overflow: hidden;
+  border: 1px solid var(--anime-border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--anime-surface) 88%, transparent);
+  box-shadow: var(--anime-shadow);
+}
+
+.bangumi-frame {
+  display: block;
+  width: 100%;
+  height: 760px;
+  border: 0;
+  background: #fff;
+}
+
+[data-theme='dark'] .bangumi-frame {
+  background: #181a2a;
+}
+
+.bangumi-empty-guide {
+  margin-top: 16px;
+  padding: 16px 18px;
+  border: 1px dashed color-mix(in srgb, var(--anime-accent-2) 40%, var(--anime-border));
+  border-radius: 14px;
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--anime-accent-2) 11%, transparent),
+    color-mix(in srgb, var(--anime-accent) 11%, transparent)
+  );
+}
+
+.bangumi-empty-guide ol {
+  margin: 10px 0 0 18px;
+}
+
+@media (max-width: 768px) {
+  .bangumi-frame-wrap {
+    min-height: 560px;
+  }
+
+  .bangumi-frame {
+    height: 560px;
+  }
+}

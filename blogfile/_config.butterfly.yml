@@ -1,4 +1,4 @@
-# --------------------------------------
+﻿# --------------------------------------
 # Hexo Butterfly Theme Configuration
 # If you have any questions, please refer to the documentation
 # Chinese: https://butterfly.js.org/
@@ -18,7 +18,8 @@ nav:
   fixed: false
 
 menu:
-  # Home: / || fas fa-home
+  Home: / || fas fa-home
+  追番: /bangumi/ || fas fa-tv
   # List||fas fa-list:
   #   Music: /music/ || fas fa-music
   #   Movie: /movies/ || fas fa-video
@@ -286,12 +287,12 @@ aside:
     description:
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/xxxxxx
+      icon: fas fa-tv
+      text: 追番窗口
+      link: /bangumi/
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 欢迎来到次元记录站
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -327,7 +328,7 @@ aside:
     enable: true
     # Type: monthly / yearly
     type: monthly
-    # Eg: YYYY��MM��
+    # Eg: YYYY锟斤拷MM锟斤拷
     format: MMMM YYYY
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: -1
@@ -363,15 +364,15 @@ rightside_bottom:
 translate:
   enable: false
   # The text of a button
-  default: ��
-  # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese��
+  default: 锟斤拷
+  # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese锟斤拷
   defaultEncoding: 2
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '��'
+  msgToTraditionalChinese: '锟斤拷'
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '��'
+  msgToSimplifiedChinese: '锟斤拷'
 
 # Read Mode
 readmode: true
@@ -1052,7 +1053,7 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/anime-unified.css">
   bottom:
     # - <script src="xxxx"></script>
 
