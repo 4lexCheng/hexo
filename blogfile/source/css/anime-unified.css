@@ -1,28 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=ZCOOL+KuaiLe&display=swap');
 
 :root {
-  --anime-bg-a: #fff8ff;
-  --anime-bg-b: #f4fbff;
-  --anime-bg-c: #f9f3ff;
-  --anime-text: #2b2a3a;
-  --anime-title: #3a315f;
-  --anime-accent: #ff7bb5;
-  --anime-accent-2: #5fb8ff;
-  --anime-border: rgba(120, 110, 170, 0.22);
+  --anime-bg-a: #f5f6ff;
+  --anime-bg-b: #eef5ff;
+  --anime-bg-c: #f3efff;
+  --anime-text: #2e3048;
+  --anime-title: #34306a;
+  --anime-accent: #7d74d8;
+  --anime-accent-2: #5fa8e8;
+  --anime-accent-3: #e7a8c8;
+  --anime-border: rgba(116, 112, 178, 0.24);
   --anime-surface: rgba(255, 255, 255, 0.72);
-  --anime-shadow: 0 14px 30px rgba(85, 82, 140, 0.14);
-  --anime-shadow-hover: 0 22px 42px rgba(85, 82, 140, 0.2);
+  --anime-shadow: 0 14px 30px rgba(62, 74, 102, 0.14);
+  --anime-shadow-hover: 0 22px 42px rgba(62, 74, 102, 0.2);
 }
 
 [data-theme='dark'] {
-  --anime-bg-a: #15182a;
-  --anime-bg-b: #1b2234;
-  --anime-bg-c: #24203b;
-  --anime-text: #e9e9f8;
-  --anime-title: #f4eeff;
-  --anime-accent: #ff8fc3;
-  --anime-accent-2: #73c8ff;
-  --anime-border: rgba(203, 198, 255, 0.2);
+  --anime-bg-a: #171a2e;
+  --anime-bg-b: #1a2440;
+  --anime-bg-c: #261f3f;
+  --anime-text: #e8e9fb;
+  --anime-title: #f3f1ff;
+  --anime-accent: #9a92f0;
+  --anime-accent-2: #76baf2;
+  --anime-accent-3: #f0b2cf;
+  --anime-border: rgba(192, 189, 245, 0.2);
   --anime-surface: rgba(34, 35, 58, 0.68);
   --anime-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
   --anime-shadow-hover: 0 24px 48px rgba(0, 0, 0, 0.46);
@@ -32,9 +34,9 @@ body {
   font-family: 'M PLUS Rounded 1c', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   color: var(--anime-text);
   background:
-    radial-gradient(circle at 8% 10%, rgba(255, 153, 220, 0.14), transparent 24%),
-    radial-gradient(circle at 90% 12%, rgba(111, 186, 255, 0.16), transparent 28%),
-    radial-gradient(circle at 85% 92%, rgba(184, 151, 255, 0.13), transparent 24%),
+    radial-gradient(circle at 8% 10%, rgba(125, 116, 216, 0.16), transparent 24%),
+    radial-gradient(circle at 90% 12%, rgba(95, 168, 232, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 92%, rgba(231, 168, 200, 0.1), transparent 24%),
     linear-gradient(130deg, var(--anime-bg-a), var(--anime-bg-b) 48%, var(--anime-bg-c));
   background-attachment: fixed;
 }
@@ -65,6 +67,72 @@ body {
 #nav .site-page:hover {
   color: var(--anime-title);
   background: color-mix(in srgb, var(--anime-accent-2) 18%, transparent);
+}
+
+#page-header.full_page {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(132, 122, 226, 0.3), transparent 30%),
+    radial-gradient(circle at 78% 16%, rgba(103, 175, 236, 0.28), transparent 34%),
+    radial-gradient(circle at 85% 88%, rgba(233, 169, 201, 0.14), transparent 30%),
+    linear-gradient(135deg, #f3f4ff 0%, #ecf4ff 48%, #f2eeff 100%);
+}
+
+[data-theme='dark'] #page-header.full_page {
+  background:
+    radial-gradient(circle at 14% 22%, rgba(146, 134, 240, 0.24), transparent 34%),
+    radial-gradient(circle at 84% 16%, rgba(95, 170, 230, 0.2), transparent 36%),
+    radial-gradient(circle at 84% 86%, rgba(237, 176, 207, 0.12), transparent 34%),
+    linear-gradient(130deg, #191d33 0%, #1c2943 55%, #282043 100%);
+}
+
+#page-header.full_page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.02) 45%),
+    repeating-linear-gradient(
+      115deg,
+      transparent 0 18px,
+      rgba(255, 255, 255, 0.08) 18px 19px,
+      transparent 19px 38px
+    );
+  pointer-events: none;
+}
+
+[data-theme='dark'] #page-header.full_page::before {
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.01) 46%),
+    repeating-linear-gradient(
+      115deg,
+      transparent 0 18px,
+      rgba(255, 255, 255, 0.05) 18px 19px,
+      transparent 19px 38px
+    );
+}
+
+#page-header.full_page #site-info {
+  position: relative;
+  z-index: 1;
+  padding: 20px 30px;
+  border: 1px solid color-mix(in srgb, var(--anime-accent-2) 24%, var(--anime-border));
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--anime-surface) 86%, transparent);
+  box-shadow: var(--anime-shadow);
+  backdrop-filter: blur(10px) saturate(130%);
+}
+
+#page-header.full_page #site-title {
+  color: var(--anime-title);
+  font-size: clamp(2.1rem, 4.8vw, 3.3rem);
+  text-shadow: 0 6px 18px rgba(86, 80, 140, 0.18);
+}
+
+#page-header.full_page #scroll-down .scroll-down-effects {
+  color: color-mix(in srgb, var(--anime-title) 80%, white);
+  text-shadow: 0 8px 20px rgba(77, 73, 128, 0.35);
 }
 
 .layout > div:first-child:not(.recent-posts),
@@ -212,6 +280,12 @@ blockquote {
 }
 
 @media (max-width: 768px) {
+  #page-header.full_page #site-info {
+    width: calc(100% - 32px);
+    padding: 16px 18px;
+    border-radius: 18px;
+  }
+
   .bangumi-frame-wrap {
     min-height: 560px;
   }
